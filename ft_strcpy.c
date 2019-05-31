@@ -6,21 +6,21 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:05:49 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/05/23 09:53:47 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/05/30 17:34:52 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	char *s2;
 
 	s2 = dst;
-	while(*src != '\0')
+	while (*src != '\0')
 	{
 		*dst++ = *src++;
 	}
 	*dst = '\0';
-	return(s2);
+	return (s2);
 }
