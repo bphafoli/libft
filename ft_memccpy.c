@@ -6,7 +6,7 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:38:18 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/05/29 13:56:46 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/05/30 16:49:54 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	char *c1;
-	char *c2;
-	size_t cur;
+	char	*c1;
+	char	*c2;
+	size_t	cur;
 
 	if (s1 == s2 || n == 0)
 		return (s1);
