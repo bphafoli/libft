@@ -6,7 +6,7 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:25:41 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/06/05 15:32:05 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/06/07 09:39:50 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
-		return (true);
+		return (1);
 	}
-	return (false);
+	return (0);
 }

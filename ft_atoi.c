@@ -6,11 +6,14 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:08:56 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/05/30 16:46:48 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/06/07 10:04:29 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 int		ft_atoi(const char *str)
 {
@@ -21,8 +24,8 @@ int		ft_atoi(const char *str)
 	i = 0;
 	final = 0;
 	negative = 0;
-	while (ispace(str[i]) || str[i] == '\v' || str[i] == '\f'
-			|| str[i] == '\r' || (str[i] == '+' && istgit(str[i])))
+	while (isspace(str[i]) || str[i] == '\v' || str[i] == '\f'
+			|| str[i] == '\r' || (str[i] == '+' && isdgit(str[i])))
 		i++;
 	if (str[i] == '-' && isdigit(str[i + 1]))
 		negative = i++;
@@ -33,4 +36,18 @@ int		ft_atoi(const char *str)
 	if (negative)
 		return (-final);
 	return (final);
+}
+int main () {
+   int val;
+   char str[20];
+   
+   strcpy(str, "98993489");
+   val = ft_atoi(str);
+   printf("String value = %s, Int value = %d\n", str, val);
+
+   strcpy(str, "tutorialspoint.com");
+   val = ft_atoi(str);
+   printf("String value = %s, Int value = %d\n", str, val);
+
+   return(0);
 }
