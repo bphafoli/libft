@@ -25,7 +25,7 @@ int		ft_atoi(const char *str)
 	final = 0;
 	negative = 0;
 	while (isspace(str[i]) || str[i] == '\v' || str[i] == '\f'
-			|| str[i] == '\r' || (str[i] == '+' && isdgit(str[i])))
+			|| str[i] == '\r' || (str[i] == '+' && isdigit(str[i])))
 		i++;
 	if (str[i] == '-' && isdigit(str[i + 1]))
 		negative = i++;
