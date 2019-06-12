@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 10:50:40 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/06/06 10:55:45 by bphafoli         ###   ########.fr       */
+/*   Created: 2019/06/12 13:36:26 by bphafoli          #+#    #+#             */
+/*   Updated: 2019/06/12 13:36:29 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char		*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char *cur;
+	char	*last_pos;
 
-	cur = (char *)s + ft_strlen(s);
-	while (*cur != c)
+	last_pos = (0);
+	while (*s)
 	{
-		if (cur == s)
-		{
-			return (NULL);
-		}
-		cur--;
+		if (*s == c)
+			last_pos = (char*)s;
+		++s;
 	}
-	return (cur);
+	if (last_pos)
+		return (last_pos);
+	if (c == '\0')
+		return ((char*)s);
+	return (0);
 }
