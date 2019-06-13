@@ -6,7 +6,7 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 16:00:11 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/06/12 13:21:40 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/06/13 15:47:38 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void			ft_putnbr(int nb);
 void			ft_putstr_fd(const char *str, int fd);
 void			ft_putstr(const char *str);
 char			*ft_strcat(char *dest, const char *src);
-int				ft_strcmp(char *s1,char *s2);
+int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
