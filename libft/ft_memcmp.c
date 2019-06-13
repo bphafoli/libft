@@ -6,27 +6,27 @@
 /*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 14:24:07 by bphafoli          #+#    #+#             */
-/*   Updated: 2019/06/13 15:34:11 by bphafoli         ###   ########.fr       */
+/*   Updated: 2019/06/13 17:27:43 by bphafoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
-	char			*dest;
-	const char		*sourc;
+	size_t			i;
+	unsigned char	*ptr;
+	unsigned char	*ptr2;
 
-	if (src == NULL || dst == NULL)
-		return (NULL);
-	dest = dst;
-	sourc = src;
+	if (n == 0)
+		return (0);
+	ptr = (unsigned char*)s1;
+	ptr2 = (unsigned char*)s2;
 	i = 0;
-	while (i < n)
+	while (*ptr == *ptr2 && ++i < n)
 	{
-		dest[i] = sourc[i];
-		i++;
+		ptr++;
+		ptr2++;
 	}
-	return (dst);
+	return ((int)(*ptr - *ptr2));
 }
