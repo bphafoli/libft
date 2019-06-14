@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bphafoli <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/14 15:38:50 by bphafoli          #+#    #+#             */
+/*   Updated: 2019/06/14 15:39:22 by bphafoli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 static int      get_base_length(char *base)
 {
         int     base_length;
@@ -21,7 +35,6 @@ static int      get_base_length(char *base)
                 return (0);
         return (base_length);
 }
-
 static int      check_errors(char *str, char *base)
 {
         int     i;
@@ -48,7 +61,6 @@ static int      check_errors(char *str, char *base)
                 return (0);
         return (1);
 }
-
 static int      get_nb(char c, char *base)
 {
         int     i;
@@ -58,7 +70,6 @@ static int      get_nb(char c, char *base)
                 i++;
         return (i);
 }
-
 int                     ft_atoi_base(char *str, char *base)
 {
         int     s;
